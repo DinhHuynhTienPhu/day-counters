@@ -1,5 +1,7 @@
 Hello, this is a small project for HCMUS students to count days since Hao, our beloved friend joined the military service.
 
+Hosted at: https://go-cay-soi.netlify.app
+
 To contribute to this project, please fork this and then create pull request.
 
 Or you can contact me on Facebook: https://www.facebook.com/phus1011/
