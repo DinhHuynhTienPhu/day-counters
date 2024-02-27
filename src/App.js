@@ -63,7 +63,7 @@ function App() {
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '90px' ,marginBottom:'10px' }}>
         <a style={{ marginLeft: '30px' }} href="https://www.facebook.com/hachihao792001">>His facebook</a>
         <a style={{ marginLeft: '30px' }} href="https://www.youtube.com/@BlueShadow792001/videos">>His legacy</a>
-        <a style={{ marginLeft: '30px' }} href="https://www.facebook.com/phus1011/">>Contribute to this project</a>
+        <a style={{ marginLeft: '30px' }} href="https://github.com/DinhHuynhTienPhu/day-counters">>Contribute to this project</a>
       </div>
     </div>
   );
