@@ -38,7 +38,7 @@ function App() {
     var seconds = Math.floor(difference / 1000);
 
     document.getElementById('text-count').textContent =
-      "It's been " + years + " years, " + months + " months, " + days + " days, " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds since he left!";
+      "It's been " + years + " years, " + months + " months, " + days + " days, " + hours + " hours, " + minutes + " minutes, and " + seconds + " seconds since he joined the military service!";
     
   }, 1000);
 
@@ -50,7 +50,7 @@ function App() {
 
     <div className="App" >
       <div  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin:  '50px' }}>
-        <span id='text-count' >It's been {years} years, {months} months, {days} days, {hours} hours, {minutes} minutes, and {seconds} seconds since he left!</span>
+        <span id='text-count' >It's been {years} years, {months} months, {days} days, {hours} hours, {minutes} minutes, and {seconds} seconds since he joined the military service!</span>
         <br />
       </div>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '10px' }}>
