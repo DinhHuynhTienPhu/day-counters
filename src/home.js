@@ -1,6 +1,6 @@
 import hao from './hao.jpg';
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function Home() {
     //const alert = useAlert()
@@ -29,7 +29,10 @@ function Home() {
     const [loaded, setLoaded] = useState(false);
     
     const [clickedIPs, setClickedIPs] = useState([]);
-    useEffect(() => {
+    const [needToLoad, setNeedToLoad] = useState(true);
+    const load = (() => {
+        if (needToLoad === false) return;
+        setNeedToLoad(false);
         //get my ip
         fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => {
             console.log(data.ip);
@@ -105,8 +108,9 @@ function Home() {
         });
         
 
-    } ,
-    );
+    });
+
+    load();
     
      
 

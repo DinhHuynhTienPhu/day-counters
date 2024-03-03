@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function Notes() {
 
     const [notes, setNotes] = useState([]);
     const [note, setNote] = useState('');
     const [username, setUsername] = useState('');
-    const[loaded, setLoaded] = useState(false);
+    const [loaded, setLoaded] = useState(false);
+    const [needToLoad, setNeedToLoad] = useState(true);
 
 
     const handleSubmit = async () => {
@@ -65,7 +66,12 @@ export default function Notes() {
 
     
 
-    useEffect(() => {
+    const load = (() => {
+        if (needToLoad === false) {
+            return;
+        }
+        setNeedToLoad(false);
+
         //eslint-disable-next-line
         console.log('fetching notes');
 
@@ -83,7 +89,9 @@ export default function Notes() {
         }).catch((error) => {
         }
         );
-    }, []);
+    });
+
+    load();
 
     //notes.json look like this
     // {
