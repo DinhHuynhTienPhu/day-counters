@@ -105,7 +105,7 @@ function Home() {
         });
         
 
-    } , [myIP, clickedIPs]
+    } ,
     );
     
      
