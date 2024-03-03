@@ -1,7 +1,6 @@
 import hao from './hao.jpg';
 import './App.css';
 import { useState, useEffect } from 'react';
-import { useAlert } from 'react-alert'
 
 function Home() {
     //const alert = useAlert()
@@ -37,13 +36,14 @@ function Home() {
         fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => {
             console.log(data.ip);
             setMyIP(data.ip);
+            //eslint-disable-next-line
             myIPRealData = data.ip;
         }).then(() => {
 
             //featch from https://api.jsonbin.io/v3/b/65e3ea5adc74654018ace96f
             // master key: $2a$10$UhgI0u9jA/3QQnEW01EAPOXlK5oBj19b9kAyfzQ/SEs9pbISpYIBi
             // acess key: $2a$10$SCMCF5.iZl1tDduNAFiFZ.3pXZJUBuDbocxeKr/aQfXwJfXT/eaRu
-            const json = fetch('https://api.jsonbin.io/v3/b/65e3ea5adc74654018ace96f/latest', {
+             fetch('https://api.jsonbin.io/v3/b/65e3ea5adc74654018ace96f/latest', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ function Home() {
             }).then(response => response.json()).then(data => {
                 console.log(data.record.count);
                 setCount(data.record.count);
-
+                //eslint-disable-next-line
                 clickedIPs = data.record.IPs;
 
 
@@ -272,9 +272,8 @@ function Home() {
                 <img src={hao} alt="hao" style={{ width: '300px' }} />
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '90px', marginBottom: '10px' }}>
-                <a style={{ marginLeft: '30px' }} href="/about">>Who is Hao</a>
-                <a style={{ marginLeft: '30px' }} href="https://www.facebook.com/hachihao792001">>His facebook</a>
-                <a style={{ marginLeft: '30px' }} href="https://www.youtube.com/@BlueShadow792001/videos">>His legacy</a>
+                        <a style={{ marginLeft: '30px' }} href="/about">>Who is Hao</a>
+                        <a style={{ marginLeft: '30px' }} href="/notes">>Notes</a>
                 <a style={{ marginLeft: '30px' }} href="https://github.com/DinhHuynhTienPhu/day-counters">>Contribute to this project</a>
             </div>
             </div>

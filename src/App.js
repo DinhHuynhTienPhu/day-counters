@@ -1,7 +1,7 @@
-import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./home";
 import About from "./about";
+import Notes from "./notes";
 
 function App() {
  
@@ -16,6 +16,7 @@ function App() {
           {/* <Route path="*" element={<NoPage />} /> */}
         </Route>
         <Route path="/about" element={<About />} />
+        <Route path="/notes" element={<Notes />} />
 
       </Routes>
     </BrowserRouter>
