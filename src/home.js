@@ -228,10 +228,24 @@ function Home() {
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '0px' }}>
             {canClick?
                 <button onClick={() => {
-                    showHeartEffect();
+                                showHeartEffect();
+                                
+                            //check can click one more time for sure
+                                if (clickedIPs.includes(myIPRealData)) {
+                                    console.log("my ip = " + myIPRealData);
+                                    console.log("clickedIPs = " + clickedIPs);
+                                    alert("You have already clicked this button today! Visit again tomorrow!");
+                                    setCanClick(false);
+                                    return;
+
+                                }
+                               
+
                     setCount(count + 1);
                     setCanClick(false);
                     console.log("count " + count);
+                                
+
                     
                     //then update the file love-count.json
                         var data = { count: count + 1 };
