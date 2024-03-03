@@ -222,7 +222,7 @@ function Home() {
                 <br />
             </div>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '0px' }}>
-                <h1><i>There is</i> {count} <i> people who miss him</i></h1>
+                <h1><i>There are</i> {count} <i> people who miss him</i></h1>
                 <br />
 
             </div>
