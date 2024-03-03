@@ -61,6 +61,8 @@ function Home() {
                 var today = new Date();
 
                 if (date !== today.toDateString()) {
+
+                    console.log("date is not today, reset the IPs");
                     //reset the "date" field to today
                     data.record.date = today.toDateString();
                     data.record.IPs = [];
@@ -87,17 +89,15 @@ function Home() {
                     // wait till myIPRealData != ''
 
 
-                    if (clickedIPs.includes(myIPRealData)) {
-                        console.log("my ip = " + myIPRealData);
-                        console.log("clickedIPs = " + clickedIPs);
+                    if (clickedIPs.includes(myIP)) {
+                        console.log("my ip = " + myIP);
 
                         setCanClick(false);
                         setLoaded(true);
 
                     }
                     else {
-                        console.log("my ip = " + myIPRealData);
-                        console.log("clickedIPs = " + clickedIPs);
+                        console.log("my ip = " + myIP);
                         setCanClick(true);
                         setLoaded(true);
 
@@ -229,11 +229,11 @@ function Home() {
             {canClick?
                 <button onClick={() => {
                                 showHeartEffect();
+                                console.log("clickedIPs to check= " + clickedIPs);
+                                console.log("my ip to check= " + myIP);
                                 
                             //check can click one more time for sure
-                                if (clickedIPs.includes(myIPRealData)) {
-                                    console.log("my ip = " + myIPRealData);
-                                    console.log("clickedIPs = " + clickedIPs);
+                                if (clickedIPs.includes(myIP)) {
                                     alert("You have already clicked this button today! Visit again tomorrow!");
                                     setCanClick(false);
                                     return;
