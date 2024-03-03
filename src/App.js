@@ -12,12 +12,9 @@ function App() {
 
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />}>
-          {/* <Route path="*" element={<NoPage />} /> */}
-        </Route>
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/notes" element={<Notes />} />
-
       </Routes>
     </BrowserRouter>
   );
