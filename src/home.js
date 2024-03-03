@@ -28,8 +28,7 @@ function Home() {
     const [canClick, setCanClick] = useState(false);
     const [loaded, setLoaded] = useState(false);
     
-    //const [clickedIPs, setClickedIPs] = useState([]);
-    var clickedIPs = [];
+    const [clickedIPs, setClickedIPs] = useState([]);
     var myIPRealData = '';
     useEffect(() => {
         //get my ip
@@ -54,7 +53,7 @@ function Home() {
                 console.log(data.record.count);
                 setCount(data.record.count);
                 //eslint-disable-next-line
-                clickedIPs = data.record.IPs;
+                setClickedIPs(data.record.IPs);
 
 
                 var date = data.record.date;
