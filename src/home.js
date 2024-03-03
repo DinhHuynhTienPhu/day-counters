@@ -29,14 +29,11 @@ function Home() {
     const [loaded, setLoaded] = useState(false);
     
     const [clickedIPs, setClickedIPs] = useState([]);
-    var myIPRealData = '';
     useEffect(() => {
         //get my ip
         fetch('https://api.ipify.org?format=json').then(response => response.json()).then(data => {
             console.log(data.ip);
             setMyIP(data.ip);
-            //eslint-disable-next-line
-            myIPRealData = data.ip;
         }).then(() => {
 
             //featch from https://api.jsonbin.io/v3/b/65e3ea5adc74654018ace96f
@@ -86,7 +83,6 @@ function Home() {
                     //if the date is today, then check if my ip is in the list
                     console.log("date is today");
                     //check if my ip is in the list
-                    // wait till myIPRealData != ''
 
 
                     if (clickedIPs.includes(myIP)) {
