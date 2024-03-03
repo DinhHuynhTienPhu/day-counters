@@ -10,6 +10,6 @@ Please keep the code as simple as possible, don't add too much libs or  fancy th
 
 TODOs: 
 - Has all the links related to Hao on this website. (if he like).
-- Has a page to explain who is Hao and why does he get so much love from us.
-- Has a page called weekly recap so that Hao can visit every weeks, and know about recent news. (should be related to HCMUS, game industry, and things he care about)
+- Has a page to explain who is Hao and why does he get so much love from us. => created but need some contribution
+- Has a page called weekly recap so that Hao can visit every weeks, and know about recent news. (should be related to HCMUS, game industry, and things he care about) => changed to "Notes" page, people can leaves up to 3 notes a day. (TODO: has daily notes, weekly notes, all time notes)
   
