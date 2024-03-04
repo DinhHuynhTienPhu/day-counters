@@ -150,7 +150,7 @@ export default function Notes() {
                 })}
             </div>
             <br />
-            <a href="/">>Back Home</a>
+            <a href="/">Back Home</a>
         </div>
     );
 }
