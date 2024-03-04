@@ -1,4 +1,3 @@
-import React from 'react'
 import ThemeBoxButton from './ThemeBoxButton'
 
 const Nav = () => {
