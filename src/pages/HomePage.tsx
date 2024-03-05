@@ -1,4 +1,5 @@
 import CountDownClock from '../components/CountDownClock'
+import MissHim from '../components/MissHim'
 
 const HomePage = () => {
   return (
@@ -9,8 +10,10 @@ const HomePage = () => {
                     <h1 className="text-5xl font-bold">HCH day counter</h1>
                     <p className="py-6">Hao Chi-Ha has left us for:</p>
                     <div className="flex justify-center">
-                    <CountDownClock />
-                    </div>
+                      <CountDownClock />
+                  </div>
+                
+                  <MissHim />
 
                 </div>
                 

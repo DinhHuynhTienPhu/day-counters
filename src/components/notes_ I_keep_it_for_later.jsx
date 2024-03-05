@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+const apiurl = 'https://simple-server-4et5.onrender.com/notes';
+
 export default function Notes() {
 
     const [notes, setNotes] = useState([]);
@@ -51,15 +53,15 @@ export default function Notes() {
         console.log(notes2);
 
         //save to jsonbin
-        await fetch('https://api.jsonbin.io/v3/b/65e40055266cfc3fde926e66', {
-            method: 'PUT',
+        await fetch(apiurl, {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'X-Master-Key': '$2a$10$UhgI0u9jA/3QQnEW01EAPOXlK5oBj19b9kAyfzQ/SEs9pbISpYIBi',
-                'X-Acess-Key': '$2a$10$SCMCF5.iZl1tDduNAFiFZ.3pXZJUBuDbocxeKr/aQfXwJfXT/eaRu'
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': '*'
             },
             body: JSON.stringify({ notes: notes2 })
-        });
+        }); 
         
 
     }
@@ -75,16 +77,16 @@ export default function Notes() {
         //eslint-disable-next-line
         console.log('fetching notes');
 
-        fetch('https://api.jsonbin.io/v3/b/65e40055266cfc3fde926e66', {
+        fetch(apiurl, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
-                'X-Master-Key': '$2a$10$UhgI0u9jA/3QQnEW01EAPOXlK5oBj19b9kAyfzQ/SEs9pbISpYIBi',
-                'X-Acess-Key': '$2a$10$SCMCF5.iZl1tDduNAFiFZ.3pXZJUBuDbocxeKr/aQfXwJfXT/eaRu'
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': '*'
             }
         }).then(response => response.json()).then((data) => {
-            console.log(data.record);
-            setNotes(data.record.notes);
+            console.log(data);
+            setNotes(data.notes);
             setLoaded(true);
         }).catch((error) => {
         }
