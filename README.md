@@ -2,9 +2,9 @@ Hello, this is a small project for HCMUS students to count days since Hao, our b
 
 Hosted at: https://go-cay-soi.netlify.app
 
-To contribute to this project, please fork this and then create pull request.
+To contribute to this project, ~~please fork this and then create pull request.~~
 
-Or you can contact me on Facebook: https://www.facebook.com/phus1011/
+you can contact me on Facebook: https://www.facebook.com/phus1011/
 
 Please keep the code as simple as possible, don't add too much libs or  fancy things. I tend to keep the website as clean as I can.
 
