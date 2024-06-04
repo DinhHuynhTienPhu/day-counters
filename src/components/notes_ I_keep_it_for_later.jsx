@@ -34,6 +34,7 @@ export default function Notes() {
 
         if (countNoteThisPersonGaveToday >= 3) {
             alert('You can only give 3 notes per day');
+            setShouldShowSubmitButton(true);
             return;
         }
 
