@@ -54,6 +54,8 @@ function MissHim() {
                     }).then(response => response.json()).then(data => {
                         console.log(data);
                         setLoaded(true);
+                        console.log("refreshed, can click");
+                        setCanClick(true);
                     }
                     );
                 }
