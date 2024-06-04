@@ -13,20 +13,18 @@ function CountDownClock() {
         setTime(moment.range(HCH_DATE, moment()));
     }, 1000)
 
-    const durationLabel = ["year", "month", "week", "day", "hour", "minute", "second"]
+    const durationLabel = [ "day", "hour", "minute", "second"]
 
     const duration = moment.duration(time.diff("second"), "seconds");
     const dayObject = useMemo(() => {
-        const durationFormatted = duration.format("y [year],M [month],w [week],d [day],h [hour],m [min],s [sec]");
+        const durationFormatted = duration.format("d [day],h [hour],m [min],s [sec]");
         const formatSplit = durationFormatted.split(",");
         return {
-            year: formatSplit[0],
-            month: formatSplit[1],
-            week: formatSplit[2],
-            day: formatSplit[3],
-            hour: formatSplit[4],
-            minute: formatSplit[5],
-            second: formatSplit[6]
+
+            day: formatSplit[0],
+            hour: formatSplit[1],
+            minute: formatSplit[2],
+            second: formatSplit[3]
         } as Record<string, string>; // Define index signature explicitly
     }, [duration]);
 
