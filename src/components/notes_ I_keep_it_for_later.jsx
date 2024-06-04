@@ -9,10 +9,12 @@ export default function Notes() {
     const [username, setUsername] = useState('');
     const [loaded, setLoaded] = useState(false);
     const [needToLoad, setNeedToLoad] = useState(true);
+    const [shouldShowSubmitButton, setShouldShowSubmitButton] = useState(true);
 
 
     const handleSubmit = async () => {
         console.log('submitting note');
+        setShouldShowSubmitButton(false);
 
         const IP = await fetch('https://api64.ipify.org?format=json')
             .then(response => response.json())
@@ -51,6 +53,11 @@ export default function Notes() {
         setNotes(notes2);
 
         console.log(notes2);
+
+        //then clear the input
+        setNote('');
+        setUsername('');
+        setShouldShowSubmitButton(true);
 
         //save to jsonbin
         await fetch(apiurl, {
@@ -130,11 +137,13 @@ export default function Notes() {
                     onChange={(e) => setUsername(e.target.value)}
                     required
                 />
+                {shouldShowSubmitButton ?
                 <button onClick={
                     (e) => {
                         handleSubmit(e);
                     }
-                } type="submit">Submit</button>
+                } type="submit">Submit</button>: <>Submitting...</>
+                }
             <div>
                 {notes.map((item) => {
                     return (
